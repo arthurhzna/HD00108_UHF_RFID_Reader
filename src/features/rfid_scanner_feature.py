@@ -45,10 +45,10 @@ class RFIDScannerFeature:
         if data:
             print("Tag inventory:")
             
-            tags = parse_data_tag_inventory(data)
-            print(tags)
+            cards = parse_data_tag_inventory(data)
+            print(cards)
 
-            self.rfid_summary_data.cards.update(tags)
+            self.rfid_summary_data.cards.update(cards)
 
             print("Unique tags:")
             print(self.rfid_summary_data.cards)
