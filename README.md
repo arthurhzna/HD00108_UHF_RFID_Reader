@@ -15,7 +15,7 @@ It connects to a UHF RFID reader via a serial port, manages RF power and tag inv
 ### Project Structure (Overview)
 
 - `src/main.py` – Application entrypoint, wires up the container, features, and pipeline
-- `src/core/` – Core infrastructure: configuration, dependency container, pipeline, worker/state management
+- `src/core/` – Core infrastructure: configuration, dependency container, pipeline, worker, state management
 - `src/domain/` – Domain models and DTOs for RFID and device data
 - `src/events/` – Event definitions and event bus
 - `src/externals/` – Integrations (serial client, MQTT client, HTTP client, WebSocket client)
