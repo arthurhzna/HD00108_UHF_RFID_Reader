@@ -1,9 +1,9 @@
 from core.container import Container
 from core.config import init_config
 from core.pipeline import Pipeline
-from feature.rfid_scanner_feature import RFIDScannerFeature
-from feature.rfid_uhf.rf_power_feature import RfPowerFeature
-from feature.rfid_uhf.tag_inventory_feature import TagInventoryFeature
+from features.rfid_scanner_feature import RFIDScannerFeature
+from features.rfid_uhf.rf_power_feature import RfPowerFeature
+from features.rfid_uhf.tag_inventory_feature import TagInventoryFeature
 
 def main():
     init_config() 

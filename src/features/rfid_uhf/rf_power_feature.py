@@ -1,6 +1,5 @@
 from externals.serial_client import SerialClient
 
-
 class RfPowerFeature: 
     SET_MAX_POWER_ALL_ANTENNA = bytes([
         0x08,

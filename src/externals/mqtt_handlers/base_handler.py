@@ -1,4 +1,3 @@
-# externals/redis_handlers/base_handler.py
 from abc import ABC, abstractmethod
 from typing import Dict, Any
 

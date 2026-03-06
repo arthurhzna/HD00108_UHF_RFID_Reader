@@ -1,4 +1,3 @@
-# externals/mqtt_handlers/device_registration_handler.py
 from externals.mqtt_handlers.base_handler import MQTTChannelHandler
 from core.state_manager import StateManager
 from datetime import datetime

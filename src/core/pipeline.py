@@ -1,4 +1,4 @@
-from feature.rfid_scanner_feature import RFIDScannerFeature
+from features.rfid_scanner_feature import RFIDScannerFeature
 from datetime import datetime
 
 class Pipeline:

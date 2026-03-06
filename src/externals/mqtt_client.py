@@ -1,4 +1,3 @@
-# externals/mqtt_client.py
 import paho.mqtt.client as mqtt
 import json
 import threading

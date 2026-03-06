@@ -1,5 +1,5 @@
-from feature.rfid_uhf.rf_power_feature import RfPowerFeature
-from feature.rfid_uhf.tag_inventory_feature import TagInventoryFeature
+from features.rfid_uhf.rf_power_feature import RfPowerFeature
+from features.rfid_uhf.tag_inventory_feature import TagInventoryFeature
 from utils.parse_data import parse_data_tag_inventory
 from domain.models.rfid import RFIDSummaryData
 from datetime import datetime

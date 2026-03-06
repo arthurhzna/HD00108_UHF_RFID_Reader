@@ -1,5 +1,3 @@
-# worker.py
-
 import threading
 import traceback
 
