@@ -7,5 +7,4 @@ import json
 class DeviceStatusEvent(BaseEvent):
     action: str
     device_id: str
-    nama: str
     timestamp: str

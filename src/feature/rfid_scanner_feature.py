@@ -63,7 +63,6 @@ class RFIDScannerFeature:
                 event_type="DEVICE_STATUS_DETECTED",  
                 action="device_status",
                 device_id=config.Config.device_id,
-                nama="RFID Scanner",
                 timestamp=timestamp.isoformat(),
             )
             self.event_bus.publish(event=device_event)
