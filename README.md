@@ -1,4 +1,4 @@
-## UHF RFID Hardware Integration
+## UHF RFID Integration
 
 This repository contains a Python-based service for integrating a UHF RFID reader with external systems over MQTT. 
 It connects to a UHF RFID reader via a serial port, manages RF power and tag inventory, and publishes events (such as device status and tag summaries) through an internal event bus and MQTT.
