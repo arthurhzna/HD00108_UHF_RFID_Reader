@@ -1,0 +1,3 @@
+Terapkan lock pada CardState.
+
+Ganti print → logging di device_registration.

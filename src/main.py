@@ -1,30 +1,20 @@
-from core.container import Container
-from core.config import init_config
-from core.pipeline import Pipeline
-from features.rfid_scanner_feature import RFIDScannerFeature
-from features.rfid_uhf.rf_power_feature import RfPowerFeature
-from features.rfid_uhf.tag_inventory_feature import TagInventoryFeature
+from bootstrap.app import build_app
 
-def main():
-    init_config() 
 
-    container = Container()
-    container.setup()
+def main() -> None:
 
-    serial_client = container.get("serial_client")
+    app = build_app()
 
-    rf_power_feature = RfPowerFeature(serial_client)
-    tag_inventory_feature = TagInventoryFeature(serial_client)
+    app.serial.connect()
+    app.mqtt.connect()
 
-    rfid_scanner_feature = RFIDScannerFeature(
-        tag_inventory_feature=tag_inventory_feature,
-        rf_power_feature=rf_power_feature,
-        event_bus=container.get("event_bus"),
-    )
-    pipeline = Pipeline(
-        rfid_scanner_feature=rfid_scanner_feature,
-    )
-    pipeline.run()
+    try:
+        app.scheduler.run()
+    except KeyboardInterrupt:   
+        pass
+    finally:
+        app.mqtt.disconnect()
+        app.serial.disconnect()
 
 
 if __name__ == "__main__":
